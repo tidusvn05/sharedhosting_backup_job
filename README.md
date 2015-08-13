@@ -1,20 +1,20 @@
 # Sharedhosting Backup Job 1.0
 
-* Goal
+###  Goal
 task take backup for shared hosting with cronjob supported
 
-* Features
-- support backup database on shared hosting.
-- auto create backup dirs.
-- can configure time to run backup in php code.(ask job timer less than configured_time).
-- clear old backup files via config.
+###  Features
+* support backup database on shared hosting.
+* auto create backup dirs.
+* can configure time to run backup in php code.(ask job timer less than configured_time).
+* clear old backup files via config.
 
-* How to use?
+###  How to use?
 - copy file backup_job.php to home directory of shared hosting or any dir in home.
 - need config to connect to database
 
 
-* Config ?
+###  Config ?
 - edit file : backup_job.php and change below lines.
 
 //backup config
@@ -33,7 +33,7 @@ define('DB_NAME', 'tandat');
 
 
 
-* Author
+###  Author
 Name: D.Nobita
 Email: tidusvn05@gmail.com
 
