@@ -15,8 +15,9 @@ task take backup for shared hosting with cronjob supported
 
 
 ###  Config ?
-- edit file : backup_job.php and change below lines.
+edit file : backup_job.php and change below lines.
 
+```sh
 //backup config
 define('CURRENT_PATH', dirname(__FILE__) );
 define('BACKUP_PATH', CURRENT_PATH.'/backups' );
@@ -30,14 +31,17 @@ define('DB_HOST', 'localhost');
 define('DB_USERNAME', 'root');
 define('DB_PASSWORD', '');
 define('DB_NAME', 'tandat'); 
-
+```
 
 
 ###  Author
-Name: D.Nobita
-Email: tidusvn05@gmail.com
+- Name: D.Nobita
+- Email: tidusvn05@gmail.com
 
+###  License
+----
 
+MIT
 
 
 
