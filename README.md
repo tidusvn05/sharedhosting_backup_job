@@ -11,6 +11,7 @@ task take backup for shared hosting with cronjob supported
 
 ###  How to use?
 - copy file backup_job.php to home directory of shared hosting or any dir in home.
+- set conjob with timer to file backup_job.php (full path). 
 - need config to connect to database
 
 
