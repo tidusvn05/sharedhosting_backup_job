@@ -1,4 +1,4 @@
-# Sharedhosting Backup Job 1.0
+# Sharedhosting Backup Job 1.1
 
 ###  Goal
 task take backup for shared hosting with cronjob supported
