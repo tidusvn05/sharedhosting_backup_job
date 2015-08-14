@@ -2,7 +2,7 @@
 <?php
 /*
 -- Version --
-1.0
+1.1
 2015-08-14
 
 -- Author --
@@ -75,20 +75,20 @@ function backup_tables($host,$user,$pass,$name,$tables = '*')
     //cycle through
     foreach($tables as $table)
     {	
-    echo "--- table: $table \r\n";
-        $result = mysql_query('SELECT * FROM '.$table);
+   // echo "--- table: $table \r\n";
+        $result = mysql_query('SELECT * FROM `'.$table.'`');
         $num_fields = mysql_num_fields($result);
-		echo "num fields: $num_fields \r\n";
-        $return.= 'DROP TABLE '.$table.';';
+		//echo "num fields: $num_fields \r\n";
+        $return.= 'DROP TABLE IF EXISTS `'.$table.'`;';
         $row2 = mysql_fetch_row(mysql_query('SHOW CREATE TABLE `'.$table.'`'));
         $return.= "\n\n".$row2[1].";\n\n";
-		echo "show create query:  {$row2[1]}";
+		//echo "show create query:  {$row2[1]}";
 		
         for ($i = 0; $i < $num_fields; $i++) 
         {
             while($row = mysql_fetch_row($result))
             {
-                $return.= 'INSERT INTO '.$table.' VALUES(';
+                $return.= 'INSERT INTO `'.$table.'` VALUES(';
                 for($j=0; $j<$num_fields; $j++) 
                 {
                     $row[$j] = addslashes($row[$j]);
